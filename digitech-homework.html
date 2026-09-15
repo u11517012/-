@@ -80,6 +80,29 @@
         li {
             margin-bottom: 8px;
         }
+        /* 可點擊卡片與 Hover 效果 */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card-link .box {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        .card-link .box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .card-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border: 1px solid var(--line);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
         footer {
             text-align: center;
             color: var(--muted);
@@ -103,16 +126,16 @@
     <section>
         <h2>Homework List</h2>
 
-        <div class="box">
-            <h3>作業一：個人網頁 HTML/CSS 基礎搭建</h3>
-            <p><strong>簡介：</strong> 學習基本網頁結構，嘗試利用語意化標籤與 CSS 變數設計一個極簡風格的個人作品集雛型。</p>
-            <p><strong>成果摘要：</strong></p>
-            <ul>
-                <li>完成響應式版面佈局（Responsive Design）</li>
-                <li>統一使用暖色調 CSS 變數維護風格一致性</li>
-            </ul>
-        </div>
+        <!-- 第三層卡片：連結到 01-html-text-11517012.html -->
+        <a href="01-html-text-11517012.html" class="card-link">
+            <div class="box">
+                <h3>作業一：水與生活：小小科學探索日</h3>
+                <p><strong>簡介：</strong> 設計適合國小中年級學生的科學探索活動網頁，練習運用 HTML 標題層級（h1~h3）、粗體、斜體以及上下標文字（H<sub>2</sub>O、cm<sup>2</sup>）等文字排版標籤。</p>
+                <span class="card-tag">點擊檢視完整網頁 →</span>
+            </div>
+        </a>
 
+        <!-- 作業二預留位置 -->
         <div class="box">
             <h3>作業二：（填寫作業名稱）</h3>
             <p><strong>簡介：</strong> 這裡可以寫下作業的說明內容或學習心得。</p>
@@ -120,7 +143,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 劉宜欣. All rights reserved.</p>
     </footer>
 </div>
 
